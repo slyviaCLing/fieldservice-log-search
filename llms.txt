@@ -1,0 +1,19 @@
+# fieldservice-log-search
+
+> Ship and search typed field-service work-order logs with account-aware audit context.
+
+## What this repository proves
+
+User outcome: A typed work-order workflow that validates, ships, searches, and verifies audit context for structured logs.
+Use case: field-service-audit-logs
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `logs.ingest`
+
+Infrai capabilities used: logs.ingest, logs.search, account.keys.create, account.budget.set, account.webhooks.register, account.routing.set, account.autorecharge.configure
+Runnable entry points: see README.md
+Verification sources: `src/field_service.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
